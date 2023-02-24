@@ -178,10 +178,11 @@ Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
 NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
 ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
 
-function indekseGoreFenomen(/*kod*/) {
+function indekseGoreFenomen(fenomenler,siraNumber) {
   /*kod*/
+  console.log( siraNumber + ". indekste bulunan fenomen: " + fenomenler[siraNumber].profile)
 }
-
+indekseGoreFenomen(fenomenler,4);
 
 
 /*  Görev 4:
@@ -192,9 +193,16 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
 */
 
-function profilListesi(/*kod*/) {
+function profilListesi(newArray) {
   /*kod*/
+  let copyArray = [];
+  for(let i=0; i<fenomenler.length; i++){
+  copyArray.push(newArray[i].profile);
+  }
+  return copyArray;
+  console.log(copyArray);
 }
+console.log(profilListesi(fenomenler));
 
 
 
